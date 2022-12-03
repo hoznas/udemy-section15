@@ -1,13 +1,13 @@
 import { Router } from 'express'
 
-import {createTodo, getHandler} from '../controllers/todos'
+import {createTodo, getTodos, updateTodo, deleteTodo} from '../controllers/todos'
 
 const router = Router()
 
 router.post('/', createTodo)
-router.get('/', getHandler)
-router.patch('/:id')
-router.delete('/:id')
+router.get('/', getTodos)
+router.patch('/:id', updateTodo)
+router.delete('/:id',deleteTodo)
 
 
 
